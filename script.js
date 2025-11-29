@@ -181,5 +181,3 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
 // INITIAL LOAD
 updateBackground();
 updatePreview();
-
-
