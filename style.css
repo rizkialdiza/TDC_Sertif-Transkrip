@@ -14,11 +14,12 @@ body {
    FORM AREA
 ================================ */
 form {
-  width: 380px;
+  width: 380px;height: 1000px;
   background: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  box-shadow: 6px 10px rgba(0,0,0,.06);
+  margin-left: 180px;
 }
 
 h1 { text-align: center; margin-bottom: 10px; }
@@ -46,10 +47,10 @@ select.pilihan_eg { width: 100%; }
 .actions { display: flex; gap: 8px; margin-top: 8px; }
 
 button {
-  padding: 10px 12px;
-  border-radius: 6px;
+  padding: 10px 15px;
+  border-radius: 9px;
   cursor: pointer;
-  border: 0;
+  border: px;
 }
 .btn-primary { background: #1f6feb; color: #fff; }
 .btn-muted { background: #eee; }
@@ -236,6 +237,7 @@ select:invalid { color: gray; }
   gap: 0px; /* Jarak nol antar elemen */
   margin: 0; /* Pastikan tidak ada margin luar */
   padding: 0; /* Pastikan tidak ada padding luar */
+  
 }
 
 /* Hilangkan margin pada h3 sepenuhnya */
