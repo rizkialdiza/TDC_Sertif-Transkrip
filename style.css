@@ -92,7 +92,7 @@ button {
 
 .bg-renault { background-image: url('Pic_Renault.png'); }
 .bg-terex   { background-image: url('Pic_Terex.png'); }
-.bg-cat     { background-image: url('PiC_OHT.png'); }
+.bg-cat     { background-image: url('Pic_OHT.png'); }
 .bg-volvo   { background-image: url('Pic_Volvo.png'); }
 
 /* Semua elemen teks di atas background */
@@ -303,4 +303,5 @@ select:invalid { color: gray; }
     margin: 10px 0 5px 0;
   }
 }
+
 
