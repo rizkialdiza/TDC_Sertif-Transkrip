@@ -31,11 +31,22 @@ const bgMap = {
 };
 
 function updateBackground() {
-  const egi = $('Training_Name').value;
-  const bgUrl = bgMap[egi] || "";
-  $('bg1').style.backgroundImage = `url('${bgUrl}')`;
-  $('bg2').style.backgroundImage = `url('${bgUrl}')`;
+    const egi = $('Training_Name').value;
+
+    const bg1 = $('bg1');
+    const bg2 = $('bg2');
+
+    // Bersihkan semua class background lama
+    bg1.className = 'bg';
+    bg2.className = 'bg';
+
+    // Jika ada pilihan EGI, tambahkan class baru
+    if (egi) {
+        bg1.classList.add('bg-' + egi);
+        bg2.classList.add('bg-' + egi);
+    }
 }
+
 
 // ===============================
 //  UPDATE PREVIEW
