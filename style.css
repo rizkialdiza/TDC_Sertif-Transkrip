@@ -86,6 +86,15 @@ button {
   z-index: 1;
 }
 
+/* ================================
+   BACKGROUND CLASS-BASED (FIXED)
+================================ */
+
+.bg-renault { background-image: url('Pic_Renault.png'); }
+.bg-terex   { background-image: url('Pic_Terex.png'); }
+.bg-cat     { background-image: url('PIC_OHT.png'); }
+.bg-volvo   { background-image: url('Pic_Volvo.png'); }
+
 /* Semua elemen teks di atas background */
 .page > *:not(.bg) {
   position: absolute;
