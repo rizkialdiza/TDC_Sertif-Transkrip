@@ -26,7 +26,7 @@ function formatDateInput(dateStr){
 const bgMap = {
   "renault": "Pic_Renault.png",
   "terex":   "Pic_Terex.png",
-  "cat":     "PiC_OHT.png",
+  "cat":     "Pic_OHT.png",
   "volvo":   "Pic_Volvo.png"
 };
 
@@ -181,4 +181,5 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
 // INITIAL LOAD
 updateBackground();
 updatePreview();
+
 
