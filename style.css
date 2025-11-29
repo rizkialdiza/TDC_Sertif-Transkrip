@@ -1,0 +1,257 @@
+/* ================================
+   BASE
+================================ */
+body {
+  font-family: 'Segoe UI', Roboto, Arial;
+  padding: 18px;
+  background: #f3f6f8;
+}
+
+.container { max-width: 1400px; margin: 0 auto; }
+.layout { display: flex; gap: 20px ;}
+
+/* ================================
+   FORM AREA
+================================ */
+form {
+  width: 380px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+h1 { text-align: center; margin-bottom: 10px; }
+
+label {
+  font-size: 13px;
+  margin-top: 8px;
+  display: block;
+}
+
+input,
+select {
+  width: 92%;
+  padding: 8px;
+  border: 1px solid #d3d9de;
+  border-radius: 4px;
+}
+
+select.pilihan_eg { width: 100%; }
+
+.row { display: flex; gap: 8px; width: 95%; }
+.row-single { display: flex; gap: 6px; margin-bottom: 4px; }
+.row-single input { width: 100%; }
+
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+
+button {
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 0;
+}
+.btn-primary { background: #1f6feb; color: #fff; }
+.btn-muted { background: #eee; }
+
+/* ================================
+   A4 LANDSCAPE PREVIEW
+================================ */
+.page {
+  position: relative;
+  width: 1404px;      /* A4 landscape correct ratio */
+  height: 993px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background: white;
+
+  /* Tambahkan ini agar preview mengecil */
+  transform-origin: top left;
+  transform: scale(0.45); /* Anda bisa ubah: 0.30 / 0.25 / 0.20 */
+}
+
+/* ================================
+   BACKGROUND IMAGE
+================================ */
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Semua elemen teks di atas background */
+.page > *:not(.bg) {
+  position: absolute;
+  z-index: 5;
+}
+
+/* ================================
+   POSISI TEKS SERTIFIKAT
+================================ */
+
+.logo {
+  position: absolute;
+  z-index: 10;
+  width: 120px;
+  height: auto;
+}
+
+/* Sertifikat */
+#logo_hrs {
+  left: 570px;
+  top: 40px;
+}
+
+#logo_tdc {
+  right: 590px;
+  top: 50px;
+}
+
+
+.cert-title { top: 130px; left:0; right:0; text-align:center; font-size: 105px; font-weight:700;text-decoration: underline; }
+.cert-trr { top: 245px; left:0; right:0; text-align:center; font-size: 60px; font-weight:700; color: #180377; }
+.cert-no { top: 320px; left: 0px;right:0; text-align:center; font-size: 32px; }
+.cert-diberikan {top: 365px; left: 0px;right:0; text-align:center; font-size: 33px; font-weight: 600; }
+.cert-name { top: 400px; left:0; right:0; text-align:center; font-size: 70px; font-weight:700; color: #2907c2;text-decoration: underline;}
+.cert-nrp { top: 495px; left:0; right:0; text-align:center; font-weight:700; font-size:35px; }
+.cert-Tmt { top: 550px; left:0; right:0; text-align:center; font-weight:700; font-size: 20px; }
+.cert-eq { top:580px; left:0; right:0; text-align:center; font-size:30px; font-weight:700;}
+.cert-training { top:620px; left:0; right:0; text-align:center; font-size:30px; font-weight:700;}
+.cert-dates { top: 670px;0px; left:0; right:0; text-align:center; }
+.cert-owner { top: 690px;0px; left:0; right:0; text-align:center;  }
+.cert-status { top:720px; left:0; right:0; text-align:center; font-weight:600; font-size: 250%;}
+.cert-tgl-sign { top:780px; left:0; right:0; text-align:center; font-weight:700; }
+.cert-PJO { top:895px; margin-left: 150px; font-weight:800; font-size: 20px; text-decoration: underline;;}
+.cert-JPJO { top:925px; margin-left: 190px; font-weight:800; font-size: 20px;}
+.cert-DH { position: relative;top:895px; right: 170px; font-weight:800; font-size: 20px; text-decoration: underline;;}
+.cert-JDH { position: relative;top:925px; right: 165px; font-weight:800; font-size: 20px;}
+
+
+/* ================================
+   TRANSKRIP
+================================ */
+
+/* Transkrip */
+#t_logo_hrs {
+  left: 40px;
+  top: 40px;
+}
+
+#t_logo_tdc {
+  right: 40px;
+  top: 40px;
+}
+.trans-meta { top:280px; left:228px; font-size:20px; }
+
+.trans-table { top:345px;   left: 40%; transform: translateX(-50%); }
+/* Ukuran kolom seperti di gambar */
+.trans-table th:nth-child(1), 
+.trans-table td:nth-child(1) {
+  width: 0px;      /* kolom nomor kecil */
+  text-align: center;
+}
+
+.trans-table th:nth-child(3), 
+.trans-table td:nth-child(3) {
+  width: 90px;  height: 25px;    /* kolom nilai kecil */
+  text-align: center;
+}
+
+/* Kolom tengah (SUBJEK) otomatis melebar */
+.trans-table th:nth-child(2), 
+.trans-table td:nth-child(2) {
+  width: auto;
+}
+
+/* Biar background table benar-benar transparan */
+.trans-table table,
+.trans-table th,
+.trans-table td {
+  background: transparent !important;
+  font-size: 20px;
+}
+
+.trans-table table {
+  width:120%;
+  border-collapse:collapse;
+  background: transparent;
+  margin-left: 7%;
+}
+.trans-table th, .trans-table td {
+  border:2.5px solid black;
+  padding:12px;
+  background: transparent;
+}
+
+.trans-footer {
+  bottom:185px;
+  left:0;
+  right:0;
+  text-align:center;
+  font-weight:700;
+  position:absolute;
+}
+
+.Trans_Title { top: 140px; left:0; right:0; text-align:center; font-size: 70px; font-weight:700;text-decoration: underline; }
+.Trans_eq { top:225px; left:0; right:0; text-align:center; font-size:30px; font-weight:700;}
+.cert-SH { top:895px; left:  20%;  transform: translateX(-50%);text-align: center ; font-weight:800; font-size: 20px; text-decoration: underline;}
+.cert-INS { top:895px; left:  82%;  transform: translateX(-50%);text-align: center ; font-weight:800; font-size: 20px; text-decoration: underline;}
+.trans-table td.nilai {font-weight: 600; text-align: center;}
+
+/* ================================
+   TITLES
+================================ */
+.Judul_Sertifikat {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.Judul_Subsertif {
+  font-weight: bold;
+}
+
+/* Placeholder select */
+select:invalid { color: gray; }
+
+/* Hilangkan scale saat export PDF */
+.page.export-pdf {
+  transform: scale(1) !important;
+}
+
+/* ================================
+   PREVIEW WRAP FIXES (VERSI LEBIH KETAT)
+================================ */
+/* Buat preview-wrap menggunakan flexbox dengan gap nol untuk jarak minimal */
+.preview-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Jarak nol antar elemen */
+  margin: 0; /* Pastikan tidak ada margin luar */
+  padding: 0; /* Pastikan tidak ada padding luar */
+}
+
+/* Hilangkan margin pada h3 sepenuhnya */
+.preview-wrap h3 {
+  margin: 0; /* Margin atas/bawah nol */
+  padding: 0; /* Padding nol */
+  font-size: 14px; /* Opsional: kecilkan agar tidak mendominasi */
+}
+
+/* Pastikan page tidak punya margin/padding tambahan */
+.page {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Jika masih ada space, tambahkan negative margin pada h3 kedua atau page2 */
+.preview-wrap h3:nth-of-type(2) { /* Target h3 untuk halaman 2 */
+  margin-top: -500px; /* Geser ke atas; sesuaikan nilai negatif jika perlu */
+}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generator Sertifikat TDC</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Generator Sertifikat & Transkrip Nilai</h1>
+    <div class="layout">
+      <form id="form">
+        
+        <label class="Judul_Sertifikat">SERTIFIKAT</label>
+
+        <label class="Judul_Subsertif">NOMOR SERTIFIKAT</label>
+
+        <div class="row-single"><input type="number" id="no_urut" placeholder="Nomor (005)"></div>
+        <div class="row-single"><input type="text" id="no_bulan" placeholder="Bulan (IX)"></div>
+        <div class="row-single"><input type="number" id="no_tahun" placeholder="Tahun (2024)"></div>
+
+        <label class="Judul_Subsertif">NAMA PESERTA
+          <input type="text" id="nama" placeholder="Nama Lengkap (KAPITAL)">
+        </label>
+
+        <label class="Judul_Subsertif">NRP
+          <input type="text" id="nrp" placeholder="302XXXXX">
+        </label>
+
+        <label class="Judul_Subsertif">UNIT
+          <select class="pilihan_eg" id="Training_Name" required>
+            <option value="" disabled selected hidden>Pilih EGI</option>
+            <option value="renault">Renault K440</option>
+            <option value="terex">Terex TR100</option>
+            <option value="cat">OHT CAT 777E</option>
+            <option value="volvo">Volvo FMX400</option>
+          </select>
+        </label>
+
+        <label class="Judul_Subsertif">MULAI TRAINING
+          <input type="date" id="tgl_mulai">
+        </label>
+
+        <label class="Judul_Subsertif">AKHIR TRAINING
+          <input type="date" id="tgl_akhir">
+        </label>
+
+        <label class="Judul_Subsertif">TANGGAL TANDA TANGAN
+          <input type="date" id="tgl_ttd">
+        </label>
+
+        <label class="Judul_Sertifikat">TRANSKRIP NILAI</label>
+
+        <div class="row">
+          <label>Nilai 1<input type="number" id="n1"></label>
+          <label>Nilai 2<input type="number" id="n2"></label>
+        </div>
+
+        <div class="row">
+          <label>Nilai 3<input type="number" id="n3"></label>
+          <label>Nilai 4<input type="number" id="n4"></label>
+        </div>
+
+        <div class="row">
+          <label>Nilai 5<input type="number" id="n5"></label>
+          <label>Nilai 6<input type="number" id="n6"></label>
+        </div>
+
+        <label class="Judul_Subsertif">RATA-RATA NILAI
+          <input type="number" id="avg" readonly>
+        </label>
+
+        <label class="Judul_Subsertif">PIC INSTRUKTUR
+          <select class="pilihan_eg" id="Instruktur" required>
+            <option value="" disabled selected hidden>Pilih Instruktur</option>
+            <option value="Kusnadi">Kusnadi</option>
+            <option value="Abdul Wahab">Abdul Wahab</option>
+            <option value="Agung Irawan">Agung Irawan</option>
+            <option value="Khoirin Nafarin">Khoirin Nafarin</option>
+            <option value="Miftakul Falah">Miftakul Falah</option>
+            <option value="Padri">Padri</option>
+            <option value="Seto Hariyono">Seto Hariyono</option>
+            <option value="Rejo Susanto">Rejo Susanto</option>
+            <option value="Sugeng Wahyudi">Sugeng Wahyudi</option>
+            <option value="Edy Suwoyo">Edy Suwoyo</option>
+            <option value="Edi Mulyono">Edi Mulyono</option>
+            <option value="Ahmad Rosdi">Ahmad Rosdi</option>
+            <option value="Wahidinnor Zahrani">Wahidinnor Zahrani</option>
+            <option value="Ahyat Firdaus">Ahyat Firdaus</option>
+          </select>
+        </label>
+
+        <label class="Judul_Subsertif">PIC SECTION HEAD
+          <select class="pilihan_eg" id="section_head" required>
+            <option value="" disabled selected hidden>Pilih Section Head</option>
+            <option value="Abdullah">Abdullah</option>
+            <option value="Akhmad Basuni">Akhmad Basuni</option>
+          </select>
+        </label>
+
+        <div class="actions">
+          <button type="button" id="previewBtn" class="btn-primary">Update Preview</button>
+          <button type="button" id="downloadBtn">Download PDF</button>
+          <button type="button" id="resetBtn" class="btn-muted">Reset</button>
+        </div>
+      </form>
+
+      <div class="preview-wrap">
+        <h3>Preview (Halaman 1) - Sertifikat</h3>
+        <div id="page1" class="page">
+          <img id="logo_hrs" class="logo" src="Logo_HRS.png">
+          <img id="logo_tdc" class="logo" src="Logo_TDC.png">
+          <div class="cert-title">SERTIFIKAT</div>
+          <div class="cert-trr">TRAINING </div>
+          <div class="cert-diberikan">DIBERIKAN KEPADA </div>
+          <div class="bg" id="bg1"></div>
+          <div class="cert-no" id="p_no"></div>
+          <div class="cert-Tmt">Telah menyelesaikan :</div>
+          <div class="cert-eq">TRAINING EQUIVALENT</div>
+          <div class="cert-name" id="p_name"></div>
+          <div class="cert-nrp" id="p_nrp"></div>
+          <div class="cert-training" id="p_training"></div>
+          <div class="cert-dates" id="p_dates"></div>
+          <div class="cert-owner">PT Antang Gunung Meratus dan dinyatakan :</div>
+          <div class="cert-status">"KOMPETEN"</div>
+          <div class="cert-tgl-sign" id="p_tglsign"></div>
+          <div class="cert-PJO">RAMA DAUPHIAN GAUTAMA</div>
+          <div class="cert-JPJO" >PROJECT MANAGER</div>
+          <div class="cert-DH">FAHRIZAL AFDHOLU S.A.</div>
+          <div class="cert-JDH" >TDC DEPARTEMENT HEAD</div>
+        </div>
+
+        <h3>Preview (Halaman 2) - Transkrip</h3>
+        <div id="page2" class="page">
+          <img id="logo_hrs" class="logo" src="Logo_HRS.png">
+          <img id="logo_tdc" class="logo" src="Logo_TDC.png">
+          <div class="Trans_Title">TRANSKRIP NILAI</div>
+          <div class="Trans_eq" id="p_transkripname"></div>
+          <div class="bg" id="bg2"></div>
+          
+          <div class="trans-meta">  
+          <div><strong>NAMA</strong> : <strong id="t_name">-</strong></div>
+          <div><strong>NRP</strong> : <strong id="t_nrp">-</strong></div>
+        </div>
+
+          <div class="trans-table">
+            <table>
+              <thead><tr><th>NOMOR</th><th>SUBJEK</th><th class="nilai">NILAI</th></tr></thead>
+              <tbody>
+                <tr><td><strong>1</strong></td><td><strong>Kesehatan & Keselamatan Kerja serta Lingkungan Hidup</strong> </td><td class="nilai" id="t_n1">-</td></tr>
+                <tr><td><strong>2</strong></td><td><strong>Komunikasi Efektif di Tempat Kerja</strong></td><td class="nilai" id="t_n2">-</td></tr>
+                <tr><td><strong>3</strong></td><td><strong>Pengenalan Unit dan Komponen</strong></td><td class="nilai" id="t_n3">-</td></tr>
+                <tr><td><strong>4</strong></td><td><strong>Instrumen Panel dan Kontrol</strong></td><td class="nilai" id="t_n4">-</td></tr>
+                <tr><td><strong>5</strong></td><td><strong>Pelaksanaan Perawatan Harian (P2H)</strong></td><td class="nilai" id="t_n5">-</td></tr>
+                <tr><td><strong>6</strong></td><td><strong>Metode & Teknik Operasi</strong></td><td class="nilai" id="t_n6">-</td></tr>
+                <tr><td colspan="2"><strong>Rata-rata</strong></td><td class="nilai" id="t_avg">-</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="trans-footer">TAPIN, <span id="t_tglsign">-</span></div>
+          <div class="cert-SH" id="t_sectionhead"></div>
+          <div class="cert-JPJO">TDC SECTION HEAD</div>
+
+          <div class="cert-INS" id="t_instruktur"></div>
+          <div class="cert-JDH">TDC INSTRUCTOR</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
