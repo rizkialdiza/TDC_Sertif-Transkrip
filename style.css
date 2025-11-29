@@ -257,3 +257,40 @@ select:invalid { color: gray; }
 .preview-wrap h3:nth-of-type(2) { /* Target h3 untuk halaman 2 */
   margin-top: -500px; /* Geser ke atas; sesuaikan nilai negatif jika perlu */
 }
+
+
+/* --- RESPONSIVE MODE UNTUK HP --- */
+@media (max-width: 768px) {
+
+  /* Layout berubah dari row → column */
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Form memenuhi lebar layar */
+  form {
+    width: 85%;
+    margin-left: 0;
+    height: auto; /* biar tidak terlalu panjang */
+  }
+
+  /* Preview juga auto fit */
+  .preview-wrap {
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Page discale agar muat layar HP */
+  .page {
+    transform: scale(0.40);        /* kecilkan lagi khusus HP */
+    transform-origin: top center;
+  }
+
+  /* Judul preview dirapikan */
+  .preview-wrap h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0 5px 0;
+  }
+}
