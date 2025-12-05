@@ -27,7 +27,12 @@ const bgMap = {
   "renault": "Pic_Renault.png",
   "terex":   "Pic_Terex.png",
   "cat":     "Pic_OHT.png",
-  "volvo":   "Pic_Volvo.png"
+  "volvo":   "Pic_Volvo.png",
+  "cat395": "Pic_CAT395.png",
+  "pc1250": "Pic_PC1250.png",
+  "d375": "Pic_Dozer.png",
+  "grader": "Pic_Grader.png",
+  "volvo420": "Pic_Volvo.png"
 };
 
 function updateBackground() {
