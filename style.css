@@ -94,6 +94,11 @@ button {
 .bg-terex   { background-image: url('Pic_Terex.png'); }
 .bg-cat     { background-image: url('Pic_OHT.png'); }
 .bg-volvo   { background-image: url('Pic_Volvo.png'); }
+.bg-cat395  { background-image: url('Pic_CAT395.png'); }
+.bg-pc1250   { background-image: url('Pic_PC1250.png'); }
+.bg-d375     { background-image: url('Pic_Dozer.png'); }
+.bg-grader   { background-image: url('Pic_Grader.png'); }
+.bg-volvo420   { background-image: url('Pic_Volvo.png'); }
 
 /* Semua elemen teks di atas background */
 .page > *:not(.bg) {
