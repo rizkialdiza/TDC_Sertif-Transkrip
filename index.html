@@ -8,13 +8,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
+  
   <div class="container">
     <h1>Generator Sertifikat & Transkrip Nilai</h1>
     <div class="layout">
       <form id="form">
         
-        <label class="Judul_Sertifikat">SERTIFIKAT</label>
+        <label class="Judul_Sertifikat">NOMOR URUT</label>
+        <label class="Judul_Subsertif">INPUT USER</label>
+        <div class="row-single"><input type="number" id="no_input" placeholder="Cek di Excel"></div>
 
+        <!-- Tombol cari -->
+        <button type="button" onclick="cariData()">Cari</button>
+
+        <!-- LOADING BAR DI SINI -->
+        <div id="miniLoading">
+          <div id="miniLoadingBar"></div>
+        </div>
+
+        <label class="Judul_Sertifikat">SERTIFIKAT</label>
         <label class="Judul_Subsertif">NOMOR SERTIFIKAT</label>
 
         <div class="row-single"><input type="number" id="no_urut" placeholder="Nomor (005)"></div>
@@ -30,18 +42,7 @@
         </label>
 
         <label class="Judul_Subsertif">UNIT
-          <select class="pilihan_eg" id="Training_Name" required>
-            <option value="" disabled selected hidden>Pilih EGI</option>
-            <option value="renault">Renault K440</option>
-            <option value="terex">Terex TR100</option>
-            <option value="cat">OHT CAT 777E</option>
-            <option value="volvo">Volvo FMX400</option>
-            <option value="volvo420">Volvo FMX420</option>
-            <option value="cat395">Excavator CAT 395</option>
-            <option value="pc1250">Excavator PC 1250</option>
-            <option value="d375">Dozer Komatsu D375a-6R</option>
-            <option value="grader">Motor Grader</option>
-          </select>
+        <input type="text" id="Training_Name" readonly class="pilihan_eg"> 
         </label>
 
         <label class="Judul_Subsertif">MULAI TRAINING
@@ -50,10 +51,6 @@
 
         <label class="Judul_Subsertif">AKHIR TRAINING
           <input type="date" id="tgl_akhir">
-        </label>
-
-        <label class="Judul_Subsertif">TANGGAL TANDA TANGAN
-          <input type="date" id="tgl_ttd">
         </label>
 
         <label class="Judul_Sertifikat">TRANSKRIP NILAI</label>
@@ -75,6 +72,12 @@
 
         <label class="Judul_Subsertif">RATA-RATA NILAI
           <input type="number" id="avg" readonly>
+        </label>
+
+       <label class="Judul_Sertifikat">INPUT USER</label>
+
+        <label class="Judul_Subsertif">TANGGAL TANDA TANGAN
+          <input type="date" id="tgl_ttd">
         </label>
 
         <label class="Judul_Subsertif">PIC INSTRUKTUR
