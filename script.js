@@ -83,11 +83,11 @@ const bgNameToKey = {
   "Renault K-440": "renault",
   "Terex TR 100A": "terex",
   "OHT CAT 777E": "cat",
-  "Volvo FMX400": "volvo",
-  "Volvo FMX420": "volvo420",
-  "Excavator CAT 395": "cat395",
-  "Excavator PC 1250": "pc1250",
-  "Dozer Komatsu D375a-6R": "d375",
+  "VOLVO FMX 400": "volvo",
+  "VOLVOFMX 420": "volvo420",
+  "CAT 395": "cat395",
+  "KOMATSU PC 1250": "pc1250",
+  "KOMATSU D375a-6R": "d375",
   "Motor Grader": "grader"
 };
 
@@ -301,7 +301,7 @@ function cariData() {
 }
 
 // ===============================
-// INIT
+// event listener
 // ===============================
 document.addEventListener('DOMContentLoaded', () => {
   attachNoInputFetcher();
