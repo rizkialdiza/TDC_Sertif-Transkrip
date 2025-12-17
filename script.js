@@ -88,9 +88,13 @@ const bgNameToKey = {
   "CAT 395": "cat395",
   "KOMATSU PC 1250": "pc1250",
   "KOMATSU D375a-6R": "d375",
-  "Motor Grader": "grader"
-};
+  "Motor Grader": "grader",
+  "Komatsu HD 785-7" : "HD785",
+  "HINO FM340 JD" : "hino340",
+  "Hino Support" : "hinosupport",
+  "Volvo Support" : "volvosupport",
 
+};
 function updateBackground(unitName = '') {
   const value = (unitName || safeGet('Training_Name') || '').trim();
 
@@ -255,18 +259,13 @@ function attachNoInputFetcher() {
         setVal('tgl_mulai', formatTanggalInput(data["Tgl Training"]));
         setVal('tgl_akhir', formatTanggalInput(data["Tgl A. OJT Tanpa Pendampingan"]));
 
-        setVal('n1', data["Nilai Tes Teori"] || "");
-        setVal('n2', data["Nilai Gerdas"] || "");
-        setVal('n3', data["Nilai OJT Pendampingan"] || "");
-        setVal('n4', data["Nilai OJT Tanpa Pendampingan"] || "");
-        setVal('n5', data["Nilai 5"] || "");
-        setVal('n6', data["Nilai 6"] || "");
-
-        if (data["Nilai Akhir"]) {
-          setVal('avg', data["Nilai Akhir"]);
-        } else {
-          computeAvg();
-        }
+        setVal('n1', data["UK I"] || "");
+        setVal('n2', data["UK II"] || "");
+        setVal('n3', data["UK III"] || "");
+        setVal('n4', data["UK IV"] || "");
+        setVal('n5', data["UK V"] || "");
+        setVal('n6', data["UK VI"] || "");
+        setVal('avg', data["Nilai Akhir"] || "");
 
         const sh = data["Section Head"] || "";
         setVal('Instruktur', data["Asesor"] || "");
