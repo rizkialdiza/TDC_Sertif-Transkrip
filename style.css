@@ -100,6 +100,10 @@ button {
 .bg-d375     { background-image: url('Pic_Dozer.png'); }
 .bg-grader   { background-image: url('Pic_Grader.png'); }
 .bg-volvo420   { background-image: url('Pic_Volvo.png'); }
+.bg-HD785   { background-image: url('Pic_HD785.png'); }
+.bg-hino340   { background-image: url('Pic_Hino340.png'); }
+.bg-hinosupport   { background-image: url('Pic_HinoSupport.png'); }
+.bg-volvosupport   { background-image: url('Pic_VolvoSupport.png'); }
 
 /* Semua elemen teks di atas background */
 .page > *:not(.bg) {
