@@ -84,7 +84,7 @@ const bgNameToKey = {
   "Terex TR 100A": "terex",
   "OHT CAT 777E": "cat",
   "VOLVO FMX 400": "volvo",
-  "VOLVOFMX 420": "volvo420",
+  "VOLVO FMX 420": "volvo420",
   "CAT 395": "cat395",
   "KOMATSU PC 1250": "pc1250",
   "KOMATSU D375a-6R": "d375",
@@ -93,6 +93,9 @@ const bgNameToKey = {
   "HINO FM340 JD" : "hino340",
   "Hino Support" : "hinosupport",
   "Volvo Support" : "volvosupport",
+  "WT Hino 500" : "wthino",
+  "WT Volvo FMX 420" : "wtvolvo400",
+  "WT Volvo FMX 400" : "wtvolvo420",
 
 };
 function updateBackground(unitName = '') {
