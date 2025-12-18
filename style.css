@@ -104,6 +104,9 @@ button {
 .bg-hino340   { background-image: url('Pic_Hino340.png'); }
 .bg-hinosupport   { background-image: url('Pic_HinoSupport.png'); }
 .bg-volvosupport   { background-image: url('Pic_VolvoSupport.png'); }
+.bg-wthino   { background-image: url('Pic_HinoSupport.png'); }
+.bg-wtvolvo400   { background-image: url('Pic_VolvoSupport.png'); }
+.bg-wtvolvo420   { background-image: url('Pic_VolvoSupport.png'); }
 
 /* Semua elemen teks di atas background */
 .page > *:not(.bg) {
