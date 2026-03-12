@@ -107,6 +107,7 @@ button {
 .bg-wthino   { background-image: url('Pic_HinoSupport.png'); }
 .bg-wtvolvo400   { background-image: url('Pic_VolvoSupport.png'); }
 .bg-wtvolvo420   { background-image: url('Pic_VolvoSupport.png'); }
+.bg-D85ess   { background-image: url('Pic_D85ess.png'); }
 
 /* Semua elemen teks di atas background */
 .page > *:not(.bg) {
