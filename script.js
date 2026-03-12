@@ -96,6 +96,7 @@ const bgNameToKey = {
   "WT Hino 500" : "wthino",
   "WT Volvo FMX 420" : "wtvolvo400",
   "WT Volvo FMX 400" : "wtvolvo420",
+  "Komatsu D85ESS": "D85ess",
 
 };
 function updateBackground(unitName = '') {
