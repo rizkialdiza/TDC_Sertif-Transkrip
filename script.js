@@ -224,7 +224,7 @@ async function initDownload() {
 // ===============================
 // Fetch from API URL
 // ===============================
-const API_URL = "https://script.google.com/macros/s/AKfycbyN_xqkhwpbWeYEydt5Dfq5ttv3wemCI4XLcvbsHnalqqY9Ib2X5HglTXQ5vT1hBCs/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzxy-uBw9wMtYRm09JG5dne_JBHyh4IF_QugJDvM4AK3u8fpxebcLIHKu4avWz2qZua/exec";
 
 function attachNoInputFetcher() {
   const noInput = $('no_input');
@@ -302,6 +302,7 @@ function cariData() {
     })
     .getDataFromSheet();
 }
+
 
 // ===============================
 // event listener
